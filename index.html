@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Observability Platform Intelligence — TCS</title>
+<title>AI Observability Platform Intelligence - TCS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -24,7 +24,7 @@ a{color:var(--accent2);text-decoration:none}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 
-/* ─── HEADER ─── */
+/* --- HEADER --- */
 .header{
   background:var(--bg2);
   border-bottom:1px solid var(--border);
@@ -46,7 +46,7 @@ a{color:var(--accent2);text-decoration:none}
 .header-text p{font-size:11px;color:var(--text-dim);font-weight:500;letter-spacing:.5px;text-transform:uppercase;margin-top:1px}
 .header-date{font-family:var(--font-mono);font-size:11px;color:var(--text-muted)}
 
-/* ─── KPI STRIP ─── */
+/* --- KPI STRIP --- */
 .kpi-strip{max-width:1640px;margin:20px auto;padding:0 40px}
 .kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
 .kpi{
@@ -60,12 +60,12 @@ a{color:var(--accent2);text-decoration:none}
 .kpi-label{font-size:11px;color:var(--text-dim);margin-top:4px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
 .kpi-sub{font-size:10px;color:var(--text-muted);margin-top:2px}
 
-/* ─── MAIN LAYOUT ─── */
+/* --- MAIN LAYOUT --- */
 .main-wrap{max-width:1640px;margin:0 auto;padding:0 40px 40px;display:flex;gap:24px}
 .sidebar{width:252px;flex-shrink:0;position:sticky;top:80px;height:fit-content;max-height:calc(100vh - 100px);overflow-y:auto}
 .content-area{flex:1;min-width:0}
 
-/* ─── FILTER PANEL ─── */
+/* --- FILTER PANEL --- */
 .filter-panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
 .filter-heading{font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
 .f-group{margin-bottom:14px}
@@ -95,7 +95,7 @@ a{color:var(--accent2);text-decoration:none}
 .btn-compare:hover{background:#3b82f6}
 .sel-count{text-align:center;font-size:11px;color:var(--text-muted);margin-top:6px}
 
-/* ─── TAB NAV ─── */
+/* --- TAB NAV --- */
 .tab-nav{
   display:flex;gap:0;margin-bottom:24px;
   border-bottom:1px solid var(--border);
@@ -115,11 +115,11 @@ a{color:var(--accent2);text-decoration:none}
 .tab-pane.active{display:block;animation:fadeUp .35s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ─── SECTION HEADERS ─── */
+/* --- SECTION HEADERS --- */
 .sec-h{font-size:18px;font-weight:800;margin:28px 0 16px;display:flex;align-items:center;gap:10px;letter-spacing:-.3px}
 .sec-h::before{content:'';width:3px;height:20px;background:var(--accent);border-radius:2px}
 
-/* ─── PLATFORM CARDS ─── */
+/* --- PLATFORM CARDS --- */
 .p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
 .p-grid.tier1-large .p-card[data-tier="1"]{grid-column:span 1}
 
@@ -170,7 +170,7 @@ a{color:var(--accent2);text-decoration:none}
 .no-res{text-align:center;padding:50px 20px;color:var(--text-dim);font-size:14px;display:none}
 .no-res.show{display:block}
 
-/* ─── QUADRANT CHART ─── */
+/* --- QUADRANT CHART --- */
 .quadrant-wrap{
   background:var(--card);border:1px solid var(--border);border-radius:14px;
   padding:28px;margin-bottom:28px;position:relative;overflow:hidden;
@@ -185,7 +185,7 @@ a{color:var(--accent2);text-decoration:none}
 .q-leg{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-dim)}
 .q-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 
-/* ─── SCORING METHODOLOGY ─── */
+/* --- SCORING METHODOLOGY --- */
 .score-intro{
   background:var(--card);border:1px solid var(--border);border-radius:12px;
   padding:22px;margin-bottom:20px;position:relative;overflow:hidden;
@@ -232,7 +232,7 @@ a{color:var(--accent2);text-decoration:none}
 .dim-examples{border-top:1px solid var(--border);padding-top:10px}
 .dim-ex-h{font-family:var(--font-mono);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:6px}
 .ex-item{font-size:10px;color:var(--text-dim);margin-bottom:4px;padding-left:10px;position:relative;line-height:1.4}
-.ex-item::before{content:'▸';position:absolute;left:0;color:var(--accent2);font-size:8px;top:1px}
+.ex-item::before{content:'-';position:absolute;left:0;color:var(--accent2);font-size:8px;top:1px}
 .ex-item strong{color:var(--text)}
 
 .score-disclaimer{
@@ -242,7 +242,7 @@ a{color:var(--accent2);text-decoration:none}
 .score-disclaimer p{font-size:11px;color:var(--text-dim);line-height:1.6;margin:0}
 .score-disclaimer strong{color:var(--accent2)}
 
-/* ─── USE CASE MATCHER ─── */
+/* --- USE CASE MATCHER --- */
 .uc-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-bottom:20px}
 .uc-group{display:flex;flex-direction:column;gap:4px}
 .uc-group label{font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
@@ -269,7 +269,7 @@ a{color:var(--accent2);text-decoration:none}
 .uc-card-reason{font-size:11px;color:var(--text-dim);line-height:1.5}
 .uc-empty{color:var(--text-dim);font-size:13px;padding:20px;text-align:center}
 
-/* ─── COMPARISON ─── */
+/* --- COMPARISON --- */
 .cmp-section{display:none;margin-top:28px}
 .cmp-section.show{display:block}
 .cmp-table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
@@ -280,7 +280,7 @@ a{color:var(--accent2);text-decoration:none}
 .cmp-table .dl{color:var(--text-dim);font-weight:700;white-space:nowrap;width:150px;font-size:11px}
 .cmp-radar-wrap{margin-top:18px;max-width:520px;margin-left:auto;margin-right:auto}
 
-/* ─── MODAL ─── */
+/* --- MODAL --- */
 .modal-bg{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.75);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
 .modal-bg.show{display:flex}
 .modal{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px;max-width:560px;width:90%;max-height:90vh;overflow-y:auto;position:relative}
@@ -290,10 +290,10 @@ a{color:var(--accent2);text-decoration:none}
 .modal-sub{font-size:12px;color:var(--text-dim);margin-bottom:18px}
 .radar-wrap{max-width:400px;margin:0 auto}
 
-/* ─── FOOTER ─── */
+/* --- FOOTER --- */
 .footer{max-width:1640px;margin:32px auto 0;padding:18px 40px;border-top:1px solid var(--border);text-align:center;font-size:11px;color:var(--text-muted)}
 
-/* ─── RESPONSIVE ─── */
+/* --- RESPONSIVE --- */
 @media(max-width:1100px){.dim-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){
   .main-wrap{flex-direction:column}
@@ -312,33 +312,33 @@ a{color:var(--accent2);text-decoration:none}
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
+<!-- === HEADER === -->
 <header class="header">
 <div class="header-inner">
 <div class="logo-area">
 <div class="tcs-badge">TCS</div>
 <div class="header-text">
 <h1>AI Observability Platform Intelligence</h1>
-<p>AI & Data Practice · 2025–2026</p>
+<p>AI & Data Practice  |  2025-2026</p>
 </div>
 </div>
 <div class="header-date">Updated Apr 2026</div>
 </div>
 </header>
 
-<!-- ═══ KPI STRIP ═══ -->
+<!-- === KPI STRIP === -->
 <section class="kpi-strip">
 <div class="kpi-row">
 <div class="kpi"><div class="kpi-val">$1.44B</div><div class="kpi-label">LLM Obs. Market 2024</div><div class="kpi-sub">Pure-Play (TBRC)</div></div>
 <div class="kpi"><div class="kpi-val">$6.80B</div><div class="kpi-label">LLM Obs. Market 2029</div><div class="kpi-sub">CAGR 36.3% (TBRC)</div></div>
-<div class="kpi"><div class="kpi-val">$1.7B</div><div class="kpi-label">AI Obs. Solutions 2025</div><div class="kpi-sub">→ $12.5B by 2034 (CMI)</div></div>
+<div class="kpi"><div class="kpi-val">$1.7B</div><div class="kpi-label">AI Obs. Solutions 2025</div><div class="kpi-sub">-> $12.5B by 2034 (CMI)</div></div>
 <div class="kpi"><div class="kpi-val">$47B+</div><div class="kpi-label">Agentic AI Market 2030</div><div class="kpi-sub">CAGR ~44% (Capgemini)</div></div>
 <div class="kpi"><div class="kpi-val">Aug 2, 2026</div><div class="kpi-label">EU AI Act High-Risk</div><div class="kpi-sub">Penalties up to €35M / 7%</div></div>
 <div class="kpi"><div class="kpi-val">38%</div><div class="kpi-label">North America Share</div><div class="kpi-sub">LLM Obs. Market (2024)</div></div>
 </div>
 </section>
 
-<!-- ═══ MAIN LAYOUT ═══ -->
+<!-- === MAIN LAYOUT === -->
 <div class="main-wrap">
 
 <!-- SIDEBAR -->
@@ -353,7 +353,7 @@ a{color:var(--accent2);text-decoration:none}
 <div class="f-group"><label>Tier</label><select id="fTier"><option value="all">All</option><option value="1">Tier 1</option><option value="2">Tier 2</option></select></div>
 <button class="btn-reset" onclick="resetFilters()">Reset Filters</button>
 <button class="btn-compare" id="compareBtn" onclick="showComparison()">Compare Selected</button>
-<div class="sel-count" id="selCount">0 selected (pick 2–4)</div>
+<div class="sel-count" id="selCount">0 selected (pick 2-4)</div>
 </div>
 </aside>
 
@@ -368,7 +368,7 @@ a{color:var(--accent2);text-decoration:none}
 <button class="tab-btn" data-tab="usecase" onclick="switchTab('usecase',this)">Use Case Matcher</button>
 </nav>
 
-<!-- ═══ TAB 1: PLATFORM CARDS ═══ -->
+<!-- === TAB 1: PLATFORM CARDS === -->
 <div class="tab-pane active" id="tab-platforms">
 <div class="p-grid" id="pGrid"></div>
 <div class="no-res" id="noRes">No platforms match current filters.</div>
@@ -379,7 +379,7 @@ a{color:var(--accent2);text-decoration:none}
 </div>
 </div>
 
-<!-- ═══ TAB 2: POSITIONING MATRIX ═══ -->
+<!-- === TAB 2: POSITIONING MATRIX === -->
 <div class="tab-pane" id="tab-quadrant">
 <div class="quadrant-wrap">
 <div class="quadrant-title">TCS AI Observability Platform Positioning Matrix</div>
@@ -395,47 +395,47 @@ a{color:var(--accent2);text-decoration:none}
 </div>
 </div>
 
-<!-- ═══ TAB 3: SCORING METHODOLOGY ═══ -->
+<!-- === TAB 3: SCORING METHODOLOGY === -->
 <div class="tab-pane" id="tab-scoring">
 <div class="score-intro">
-<p>All platforms scored on a <strong>1–10 scale across 6 dimensions</strong>. Each score synthesizes: <strong>official docs</strong>, <strong>community benchmarks</strong>, <strong>hands-on engineering reports</strong>, and <strong>TCS practitioner assessments (2025–2026)</strong>.</p>
-<p>Scores are <strong>relative within the AI observability landscape</strong> — 10 = best-in-class for that dimension, not "perfect."</p>
+<p>All platforms scored on a <strong>1-10 scale across 6 dimensions</strong>. Each score synthesizes: <strong>official docs</strong>, <strong>community benchmarks</strong>, <strong>hands-on engineering reports</strong>, and <strong>TCS practitioner assessments (2025-2026)</strong>.</p>
+<p>Scores are <strong>relative within the AI observability landscape</strong> - 10 = best-in-class for that dimension, not "perfect."</p>
 </div>
 
 <div class="scale-ref">
 <div class="scale-ref-title">Score Scale</div>
 <div class="scale-bar"></div>
 <div class="scale-labels">
-<div class="scale-lbl weak"><span class="rng">1–3</span><span class="desc">Weak / Not core</span></div>
-<div class="scale-lbl mod"><span class="rng">4–6</span><span class="desc">Moderate / Limited</span></div>
-<div class="scale-lbl strong"><span class="rng">7–8</span><span class="desc">Strong / Prod-ready</span></div>
-<div class="scale-lbl best"><span class="rng">9–10</span><span class="desc">Best-in-class</span></div>
+<div class="scale-lbl weak"><span class="rng">1-3</span><span class="desc">Weak / Not core</span></div>
+<div class="scale-lbl mod"><span class="rng">4-6</span><span class="desc">Moderate / Limited</span></div>
+<div class="scale-lbl strong"><span class="rng">7-8</span><span class="desc">Strong / Prod-ready</span></div>
+<div class="scale-lbl best"><span class="rng">9-10</span><span class="desc">Best-in-class</span></div>
 </div>
 </div>
 
 <div class="dim-grid">
 <!-- Dim 1 -->
 <div class="dim-card"><div class="dim-accent" style="background:#2563eb"></div>
-<div class="dim-head"><div class="dim-icon" style="background:rgba(37,99,235,.12);color:#2563eb">⛓</div><div><div class="dim-title">Tracing Depth</div><div class="dim-sub">Granularity across LLM calls, agent steps, tool invocations, multi-step pipelines</div></div></div>
+<div class="dim-head"><div class="dim-icon" style="background:rgba(37,99,235,.12);color:#2563eb">T</div><div><div class="dim-title">Tracing Depth</div><div class="dim-sub">Granularity across LLM calls, agent steps, tool invocations, multi-step pipelines</div></div></div>
 <div class="dim-criteria"><div class="dim-criteria-h">Criteria</div>
-<div class="cr-row"><span class="cr-rng best">9–10</span><span class="cr-txt">Full multi-agent traces, async propagation, OTel-native, token-level logging</span></div>
-<div class="cr-row"><span class="cr-rng strong">7–8</span><span class="cr-txt">Multi-step tracing, good span coverage, partial OTel</span></div>
-<div class="cr-row"><span class="cr-rng mod">4–6</span><span class="cr-txt">Single-call or shallow traces, proxy-level only</span></div>
-<div class="cr-row"><span class="cr-rng weak">1–3</span><span class="cr-txt">No meaningful tracing</span></div>
+<div class="cr-row"><span class="cr-rng best">9-10</span><span class="cr-txt">Full multi-agent traces, async propagation, OTel-native, token-level logging</span></div>
+<div class="cr-row"><span class="cr-rng strong">7-8</span><span class="cr-txt">Multi-step tracing, good span coverage, partial OTel</span></div>
+<div class="cr-row"><span class="cr-rng mod">4-6</span><span class="cr-txt">Single-call or shallow traces, proxy-level only</span></div>
+<div class="cr-row"><span class="cr-rng weak">1-3</span><span class="cr-txt">No meaningful tracing</span></div>
 </div>
 <div class="dim-examples"><div class="dim-ex-h">Callouts</div>
 <div class="ex-item"><strong>LangSmith (9):</strong> Full LangChain agent step tracing with nested spans</div>
-<div class="ex-item"><strong>Evidently AI (3):</strong> Batch eval only — no real-time traces</div>
+<div class="ex-item"><strong>Evidently AI (3):</strong> Batch eval only - no real-time traces</div>
 </div></div>
 
 <!-- Dim 2 -->
 <div class="dim-card"><div class="dim-accent" style="background:#7c3aed"></div>
-<div class="dim-head"><div class="dim-icon" style="background:rgba(124,58,237,.12);color:#7c3aed">✦</div><div><div class="dim-title">Evaluation Quality</div><div class="dim-sub">Hallucination detection, RAG faithfulness, relevance, safety, regression testing</div></div></div>
+<div class="dim-head"><div class="dim-icon" style="background:rgba(124,58,237,.12);color:#7c3aed">E</div><div><div class="dim-title">Evaluation Quality</div><div class="dim-sub">Hallucination detection, RAG faithfulness, relevance, safety, regression testing</div></div></div>
 <div class="dim-criteria"><div class="dim-criteria-h">Criteria</div>
-<div class="cr-row"><span class="cr-rng best">9–10</span><span class="cr-txt">Multi-metric suites, CI/CD integration, human feedback loops</span></div>
-<div class="cr-row"><span class="cr-rng strong">7–8</span><span class="cr-txt">5+ metrics, dataset versioning, reproducible runs</span></div>
-<div class="cr-row"><span class="cr-rng mod">4–6</span><span class="cr-txt">Basic scoring, limited metrics, no regression tracking</span></div>
-<div class="cr-row"><span class="cr-rng weak">1–3</span><span class="cr-txt">No evaluation engine</span></div>
+<div class="cr-row"><span class="cr-rng best">9-10</span><span class="cr-txt">Multi-metric suites, CI/CD integration, human feedback loops</span></div>
+<div class="cr-row"><span class="cr-rng strong">7-8</span><span class="cr-txt">5+ metrics, dataset versioning, reproducible runs</span></div>
+<div class="cr-row"><span class="cr-rng mod">4-6</span><span class="cr-txt">Basic scoring, limited metrics, no regression tracking</span></div>
+<div class="cr-row"><span class="cr-rng weak">1-3</span><span class="cr-txt">No evaluation engine</span></div>
 </div>
 <div class="dim-examples"><div class="dim-ex-h">Callouts</div>
 <div class="ex-item"><strong>Arize/Phoenix (10):</strong> 40+ eval templates, RAG triad, OTel-native eval spans</div>
@@ -444,12 +444,12 @@ a{color:var(--accent2);text-decoration:none}
 
 <!-- Dim 3 -->
 <div class="dim-card"><div class="dim-accent" style="background:#059669"></div>
-<div class="dim-head"><div class="dim-icon" style="background:rgba(5,150,105,.12);color:#059669">🏛</div><div><div class="dim-title">Enterprise Readiness</div><div class="dim-sub">Compliance, multi-tenancy, RBAC, SLAs, audit trails, regulated industry support</div></div></div>
+<div class="dim-head"><div class="dim-icon" style="background:rgba(5,150,105,.12);color:#059669">R</div><div><div class="dim-title">Enterprise Readiness</div><div class="dim-sub">Compliance, multi-tenancy, RBAC, SLAs, audit trails, regulated industry support</div></div></div>
 <div class="dim-criteria"><div class="dim-criteria-h">Criteria</div>
-<div class="cr-row"><span class="cr-rng best">9–10</span><span class="cr-txt">SOC2+HIPAA+PCI-DSS, RBAC, immutable logs, SR 11-7 / EU AI Act</span></div>
-<div class="cr-row"><span class="cr-rng strong">7–8</span><span class="cr-txt">SOC2, multi-tenant, good RBAC, prod-grade reliability</span></div>
-<div class="cr-row"><span class="cr-rng mod">4–6</span><span class="cr-txt">Basic security, limited certs, non-regulated only</span></div>
-<div class="cr-row"><span class="cr-rng weak">1–3</span><span class="cr-txt">OSS only, no certs</span></div>
+<div class="cr-row"><span class="cr-rng best">9-10</span><span class="cr-txt">SOC2+HIPAA+PCI-DSS, RBAC, immutable logs, SR 11-7 / EU AI Act</span></div>
+<div class="cr-row"><span class="cr-rng strong">7-8</span><span class="cr-txt">SOC2, multi-tenant, good RBAC, prod-grade reliability</span></div>
+<div class="cr-row"><span class="cr-rng mod">4-6</span><span class="cr-txt">Basic security, limited certs, non-regulated only</span></div>
+<div class="cr-row"><span class="cr-rng weak">1-3</span><span class="cr-txt">OSS only, no certs</span></div>
 </div>
 <div class="dim-examples"><div class="dim-ex-h">Callouts</div>
 <div class="ex-item"><strong>Fiddler AI (10):</strong> SR 11-7, HIPAA, SOC2, explainability-first</div>
@@ -458,26 +458,26 @@ a{color:var(--accent2);text-decoration:none}
 
 <!-- Dim 4 -->
 <div class="dim-card"><div class="dim-accent" style="background:#d97706"></div>
-<div class="dim-head"><div class="dim-icon" style="background:rgba(217,119,6,.12);color:#d97706">⚡</div><div><div class="dim-title">Setup Ease</div><div class="dim-sub">Time from zero to first trace/eval — SDK complexity, docs quality, integration friction</div></div></div>
+<div class="dim-head"><div class="dim-icon" style="background:rgba(217,119,6,.12);color:#d97706">S</div><div><div class="dim-title">Setup Ease</div><div class="dim-sub">Time from zero to first trace/eval - SDK complexity, docs quality, integration friction</div></div></div>
 <div class="dim-criteria"><div class="dim-criteria-h">Criteria</div>
-<div class="cr-row"><span class="cr-rng best">9–10</span><span class="cr-txt">Under 5 min, single-line/proxy setup, zero config</span></div>
-<div class="cr-row"><span class="cr-rng strong">7–8</span><span class="cr-txt">Under 30 min, clear SDK, good docs</span></div>
-<div class="cr-row"><span class="cr-rng mod">4–6</span><span class="cr-txt">1–4 hours, config-heavy</span></div>
-<div class="cr-row"><span class="cr-rng weak">1–3</span><span class="cr-txt">Days of setup, steep learning curve</span></div>
+<div class="cr-row"><span class="cr-rng best">9-10</span><span class="cr-txt">Under 5 min, single-line/proxy setup, zero config</span></div>
+<div class="cr-row"><span class="cr-rng strong">7-8</span><span class="cr-txt">Under 30 min, clear SDK, good docs</span></div>
+<div class="cr-row"><span class="cr-rng mod">4-6</span><span class="cr-txt">1-4 hours, config-heavy</span></div>
+<div class="cr-row"><span class="cr-rng weak">1-3</span><span class="cr-txt">Days of setup, steep learning curve</span></div>
 </div>
 <div class="dim-examples"><div class="dim-ex-h">Callouts</div>
-<div class="ex-item"><strong>Helicone (10):</strong> One URL change — first trace in 60 seconds</div>
+<div class="ex-item"><strong>Helicone (10):</strong> One URL change - first trace in 60 seconds</div>
 <div class="ex-item"><strong>Fiddler AI (4):</strong> Dedicated infra setup, ML team involvement</div>
 </div></div>
 
 <!-- Dim 5 -->
 <div class="dim-card"><div class="dim-accent" style="background:#0891b2"></div>
-<div class="dim-head"><div class="dim-icon" style="background:rgba(8,145,178,.12);color:#0891b2">💲</div><div><div class="dim-title">Cost Transparency</div><div class="dim-sub">Token usage, per-request pricing, cost alerts, budget controls, exportable reports</div></div></div>
+<div class="dim-head"><div class="dim-icon" style="background:rgba(8,145,178,.12);color:#0891b2">$</div><div><div class="dim-title">Cost Transparency</div><div class="dim-sub">Token usage, per-request pricing, cost alerts, budget controls, exportable reports</div></div></div>
 <div class="dim-criteria"><div class="dim-criteria-h">Criteria</div>
-<div class="cr-row"><span class="cr-rng best">9–10</span><span class="cr-txt">Real-time per-request cost, token attribution, budget controls</span></div>
-<div class="cr-row"><span class="cr-rng strong">7–8</span><span class="cr-txt">Good dashboards, token tracking, basic alerts</span></div>
-<div class="cr-row"><span class="cr-rng mod">4–6</span><span class="cr-txt">Aggregate views only, no alerts</span></div>
-<div class="cr-row"><span class="cr-rng weak">1–3</span><span class="cr-txt">No cost tracking / opaque pricing</span></div>
+<div class="cr-row"><span class="cr-rng best">9-10</span><span class="cr-txt">Real-time per-request cost, token attribution, budget controls</span></div>
+<div class="cr-row"><span class="cr-rng strong">7-8</span><span class="cr-txt">Good dashboards, token tracking, basic alerts</span></div>
+<div class="cr-row"><span class="cr-rng mod">4-6</span><span class="cr-txt">Aggregate views only, no alerts</span></div>
+<div class="cr-row"><span class="cr-rng weak">1-3</span><span class="cr-txt">No cost tracking / opaque pricing</span></div>
 </div>
 <div class="dim-examples"><div class="dim-ex-h">Callouts</div>
 <div class="ex-item"><strong>Helicone (9):</strong> Per-request cost + caching savings + budget alerts</div>
@@ -486,12 +486,12 @@ a{color:var(--accent2);text-decoration:none}
 
 <!-- Dim 6 -->
 <div class="dim-card"><div class="dim-accent" style="background:#dc2626"></div>
-<div class="dim-head"><div class="dim-icon" style="background:rgba(220,38,38,.12);color:#dc2626">🤖</div><div><div class="dim-title">Agentic Support</div><div class="dim-sub">Multi-agent graph tracing, tool chains, memory logging, planning loops, CrewAI/AutoGen/LangGraph</div></div></div>
+<div class="dim-head"><div class="dim-icon" style="background:rgba(220,38,38,.12);color:#dc2626">A</div><div><div class="dim-title">Agentic Support</div><div class="dim-sub">Multi-agent graph tracing, tool chains, memory logging, planning loops, CrewAI/AutoGen/LangGraph</div></div></div>
 <div class="dim-criteria"><div class="dim-criteria-h">Criteria</div>
-<div class="cr-row"><span class="cr-rng best">9–10</span><span class="cr-txt">Full multi-agent graph, tool invocation, memory r/w, reasoning capture</span></div>
-<div class="cr-row"><span class="cr-rng strong">7–8</span><span class="cr-txt">Multi-step agent tracing, partial tool call visibility</span></div>
-<div class="cr-row"><span class="cr-rng mod">4–6</span><span class="cr-txt">Single-agent only, limited tool capture</span></div>
-<div class="cr-row"><span class="cr-rng weak">1–3</span><span class="cr-txt">No agentic support — single LLM calls only</span></div>
+<div class="cr-row"><span class="cr-rng best">9-10</span><span class="cr-txt">Full multi-agent graph, tool invocation, memory r/w, reasoning capture</span></div>
+<div class="cr-row"><span class="cr-rng strong">7-8</span><span class="cr-txt">Multi-step agent tracing, partial tool call visibility</span></div>
+<div class="cr-row"><span class="cr-rng mod">4-6</span><span class="cr-txt">Single-agent only, limited tool capture</span></div>
+<div class="cr-row"><span class="cr-rng weak">1-3</span><span class="cr-txt">No agentic support - single LLM calls only</span></div>
 </div>
 <div class="dim-examples"><div class="dim-ex-h">Callouts</div>
 <div class="ex-item"><strong>LangSmith (8):</strong> Native LangGraph with agent step + tool call capture</div>
@@ -500,11 +500,11 @@ a{color:var(--accent2);text-decoration:none}
 </div>
 
 <div class="score-disclaimer">
-<p><strong>Scoring Transparency:</strong> Scores = TCS AI & Data Practice assessments from platform docs, community benchmarks, and practitioner evals as of Q1–Q2 2026. Scores evolve as platforms release features. Evaluated against enterprise production deployment standards.</p>
+<p><strong>Scoring Transparency:</strong> Scores = TCS AI & Data Practice assessments from platform docs, community benchmarks, and practitioner evals as of Q1-Q2 2026. Scores evolve as platforms release features. Evaluated against enterprise production deployment standards.</p>
 </div>
 </div>
 
-<!-- ═══ TAB 4: USE CASE MATCHER ═══ -->
+<!-- === TAB 4: USE CASE MATCHER === -->
 <div class="tab-pane" id="tab-usecase">
 <div class="uc-controls">
 <div class="uc-group"><label>Industry</label><select id="ucInd" onchange="updateUC()"><option value="">Select Industry</option><option value="bfsi">BFSI</option><option value="healthcare">Healthcare</option><option value="manufacturing">Manufacturing</option></select></div>
@@ -517,18 +517,18 @@ a{color:var(--accent2);text-decoration:none}
 </main>
 </div>
 
-<!-- ═══ RADAR MODAL ═══ -->
+<!-- === RADAR MODAL === -->
 <div class="modal-bg" id="radarModal">
 <div class="modal">
-<button class="modal-x" onclick="closeModal()">✕</button>
+<button class="modal-x" onclick="closeModal()">X</button>
 <div class="modal-title" id="rmTitle"></div>
 <div class="modal-sub" id="rmSub"></div>
 <div class="radar-wrap"><canvas id="radarChart"></canvas></div>
 </div>
 </div>
 
-<!-- ═══ FOOTER ═══ -->
-<footer class="footer">TCS AI & Data Practice · AI Observability Intelligence · 2025–2026 · Confidential</footer>
+<!-- === FOOTER === -->
+<footer class="footer">TCS AI & Data Practice  |  AI Observability Intelligence  |  2025-2026  |  Confidential</footer>
 
 <script>
 // ============================================================
@@ -541,11 +541,11 @@ const P = [
 {id:4,name:"Braintrust",tier:1,cat:"Evaluation-First",se:8,otel:"Partial",sh:"No",str:["Best eval workflow UX","Dataset versioning & CI/CD","Extremely reproducible evals"],gaps:["Limited real-time monitoring","No self-host","Tracing depth limited"],ideal:"Eval-first, product teams",seg:["mid-scale"],comp:["SOC2"],sc:{t:6,e:10,en:7,s:8,c:7,a:6},caps:["evaluation"],dep:["saas"],fw:["langchain","openai","custom"]},
 {id:5,name:"W&B Weave",tier:1,cat:"ML+LLM Hybrid",se:7,otel:"Partial",sh:"Yes (Ent)",str:["Seamless ML+LLM unified tracking","@weave.op decorator setup","Deep experiment management"],gaps:["LLM eval less mature","Cost at scale","Async timing inaccuracies"],ideal:"W&B teams, ML+LLM hybrid",seg:["mid-scale","enterprise"],comp:["SOC2","HIPAA"],sc:{t:7,e:8,en:8,s:7,c:6,a:7},caps:["tracing","evaluation","monitoring"],dep:["saas","self-host"],fw:["llamaindex","openai","custom"]},
 {id:6,name:"Galileo AI",tier:1,cat:"Evaluation-First",se:7,otel:"No",sh:"No",str:["Hallucination detection leader","Data quality scoring","Strong ethical guardrails"],gaps:["No self-host","Limited tracing","Closed ecosystem"],ideal:"Data quality + hallucination",seg:["mid-scale","enterprise"],comp:["SOC2"],sc:{t:5,e:9,en:7,s:7,c:5,a:5},caps:["evaluation","guardrails"],dep:["saas"],fw:["langchain","llamaindex"]},
-{id:7,name:"Helicone",tier:1,cat:"Tracing-First",se:10,otel:"Partial",sh:"Yes",str:["Fastest setup — 1 line proxy","Excellent cost tracking & caching","Edge-optimized, high throughput"],gaps:["Shallow evaluation","Limited agentic support","Proxy = SPOF risk"],ideal:"Startups, quick cost viz",seg:["startup"],comp:["SOC2"],sc:{t:7,e:4,en:5,s:10,c:9,a:4},caps:["tracing","monitoring"],dep:["saas","self-host"],fw:["openai","custom"]},
+{id:7,name:"Helicone",tier:1,cat:"Tracing-First",se:10,otel:"Partial",sh:"Yes",str:["Fastest setup - 1 line proxy","Excellent cost tracking & caching","Edge-optimized, high throughput"],gaps:["Shallow evaluation","Limited agentic support","Proxy = SPOF risk"],ideal:"Startups, quick cost viz",seg:["startup"],comp:["SOC2"],sc:{t:7,e:4,en:5,s:10,c:9,a:4},caps:["tracing","monitoring"],dep:["saas","self-host"],fw:["openai","custom"]},
 {id:8,name:"Maxim AI",tier:1,cat:"Full-Stack",se:7,otel:"Partial",sh:"No",str:["End-to-end LLM lifecycle","Testing+monitoring unified","SOC2, HIPAA, ISO 27001"],gaps:["Newer, smaller community","Limited enterprise refs","Proprietary eval format risk"],ideal:"Product teams building LLM apps",seg:["mid-scale"],comp:["SOC2"],sc:{t:7,e:8,en:6,s:7,c:6,a:7},caps:["tracing","evaluation","monitoring","guardrails"],dep:["saas"],fw:["langchain","llamaindex","custom"]},
 {id:9,name:"Fiddler AI",tier:1,cat:"Enterprise MLOps",se:4,otel:"Partial",sh:"Yes",str:["Explainability-first, model risk","Regulated depth (BFSI/Health)","EU AI Act & SR 11-7 aligned"],gaps:["Complex setup (8/10)","LLM features still maturing","UI biased toward tabular ML"],ideal:"BFSI, Healthcare enterprises",seg:["enterprise"],comp:["SOC2","HIPAA"],sc:{t:6,e:8,en:10,s:4,c:4,a:5},caps:["monitoring","guardrails","evaluation"],dep:["saas","self-host"],fw:["custom"]},
 {id:10,name:"Datadog LLM Obs",tier:1,cat:"Full-Stack Enterprise",se:6,otel:"Yes",sh:"No",str:["Unified infra+LLM observability","Best APM correlation","Virtually limitless scale"],gaps:["LLM depth vs pure-play","Expensive, unpredictable billing","SaaS-only, vendor lock-in"],ideal:"Datadog ecosystem enterprises",seg:["enterprise"],comp:["SOC2","HIPAA","PCI-DSS"],sc:{t:8,e:6,en:10,s:6,c:5,a:6},caps:["tracing","monitoring"],dep:["saas"],fw:["langchain","openai","custom"]},
-{id:11,name:"WhyLabs ⚠️ ACQUIRED",tier:2,cat:"DEPRECATED (Apple 2025)",se:3,otel:"Partial",sh:"Yes (OSS only)",str:["Data drift detection (legacy)","Privacy-preserving whylogs (OSS)","LangGraph support (pre-acquisition)"],gaps:["Acquired by Apple — ceased commercial ops","No commercial support available","OSS components only — no SaaS tier"],ideal:"⚠️ Non-critical / research only",seg:["mid-scale","enterprise"],comp:[],sc:{t:5,e:6,en:3,s:3,c:6,a:5},caps:["monitoring","guardrails"],dep:["self-host"],fw:["custom"]},
+{id:11,name:"WhyLabs [!] ACQUIRED",tier:2,cat:"DEPRECATED (Apple 2025)",se:3,otel:"Partial",sh:"Yes (OSS only)",str:["Data drift detection (legacy)","Privacy-preserving whylogs (OSS)","LangGraph support (pre-acquisition)"],gaps:["Acquired by Apple - ceased commercial ops","No commercial support available","OSS components only - no SaaS tier"],ideal:"[!] Non-critical / research only",seg:["mid-scale","enterprise"],comp:[],sc:{t:5,e:6,en:3,s:3,c:6,a:5},caps:["monitoring","guardrails"],dep:["self-host"],fw:["custom"]},
 {id:12,name:"Evidently AI",tier:2,cat:"OSS Evaluation",se:8,otel:"No",sh:"Yes",str:["Rich OSS test suites","CI/CD friendly data quality","Completely free & open-source"],gaps:["No real-time monitoring","Limited LLM tracing","No SaaS tier"],ideal:"Data science, batch eval",seg:["startup","mid-scale"],comp:[],sc:{t:3,e:8,en:5,s:8,c:10,a:3},caps:["evaluation"],dep:["self-host"],fw:["custom"]},
 {id:13,name:"Superwise",tier:2,cat:"Model Monitoring",se:6,otel:"Partial",sh:"No",str:["Production model monitoring","Bias detection & explainability","ML+LLM hybrid support"],gaps:["LLM features limited","Smaller ecosystem","No self-host"],ideal:"ML+LLM hybrid teams",seg:["mid-scale","enterprise"],comp:["SOC2"],sc:{t:4,e:7,en:7,s:6,c:6,a:4},caps:["monitoring"],dep:["saas"],fw:["custom"]},
 {id:14,name:"Comet Opik",tier:2,cat:"Eval+Tracing",se:7,otel:"Partial",sh:"Yes",str:["LLM tracing+eval unified","OSS + Comet ML integration","Growing community"],gaps:["Smaller community","Enterprise features maturing","Limited brand recognition"],ideal:"Comet ML teams",seg:["mid-scale"],comp:["SOC2"],sc:{t:7,e:7,en:6,s:7,c:7,a:6},caps:["tracing","evaluation"],dep:["saas","self-host"],fw:["langchain","custom"]},
@@ -554,7 +554,7 @@ const P = [
 ];
 
 const ucData = {
-bfsi:{"Fraud Detection":{p:["Arize / Phoenix","Fiddler AI"],r:{"Arize / Phoenix":"Best-in-class drift detection and real-time anomaly monitoring for transaction patterns. OTel-native. HIPAA-ready.","Fiddler AI":"SR 11-7 compliance alignment, explainability-first for regulatory audits on fraud models."}},"Credit Scoring":{p:["Fiddler AI","Arize / Phoenix"],r:{"Fiddler AI":"EU AI Act high-risk requires explainability and bias detection — Fiddler's core. SR 11-7 aligned.","Arize / Phoenix":"OTel-native drift detection and embedding analysis for credit model fairness monitoring over time."}},"Customer Service LLM":{p:["LangSmith","Langfuse"],r:{"LangSmith":"Deep tracing for LangChain-based CS agents, prompt versioning for response iteration.","Langfuse":"Self-hostable for strict GDPR, excellent prompt management for customer-facing LLMs."}},"Regulatory Compliance":{p:["Fiddler AI","Datadog LLM Obs"],r:{"Fiddler AI":"SOC2, HIPAA, SR 11-7 with immutable audit trails and model risk management.","Datadog LLM Obs":"Unified APM for full-stack audit trails, SOC2/HIPAA/PCI-DSS compliance."}}},
+bfsi:{"Fraud Detection":{p:["Arize / Phoenix","Fiddler AI"],r:{"Arize / Phoenix":"Best-in-class drift detection and real-time anomaly monitoring for transaction patterns. OTel-native. HIPAA-ready.","Fiddler AI":"SR 11-7 compliance alignment, explainability-first for regulatory audits on fraud models."}},"Credit Scoring":{p:["Fiddler AI","Arize / Phoenix"],r:{"Fiddler AI":"EU AI Act high-risk requires explainability and bias detection - Fiddler's core. SR 11-7 aligned.","Arize / Phoenix":"OTel-native drift detection and embedding analysis for credit model fairness monitoring over time."}},"Customer Service LLM":{p:["LangSmith","Langfuse"],r:{"LangSmith":"Deep tracing for LangChain-based CS agents, prompt versioning for response iteration.","Langfuse":"Self-hostable for strict GDPR, excellent prompt management for customer-facing LLMs."}},"Regulatory Compliance":{p:["Fiddler AI","Datadog LLM Obs"],r:{"Fiddler AI":"SOC2, HIPAA, SR 11-7 with immutable audit trails and model risk management.","Datadog LLM Obs":"Unified APM for full-stack audit trails, SOC2/HIPAA/PCI-DSS compliance."}}},
 healthcare:{"Clinical Decision Support":{p:["Arize / Phoenix","Fiddler AI"],r:{"Arize / Phoenix":"Deep eval suite for clinical AI validation, HIPAA-ready, drift detection.","Fiddler AI":"FDA SaMD alignment, explainability-first for clinical transparency."}},"Diagnostic AI":{p:["Arize / Phoenix","Fiddler AI"],r:{"Arize / Phoenix":"Embedding drift detection for imaging models, OTel-native for enterprise integration. HIPAA-ready.","Fiddler AI":"FDA SaMD guidance, regulated explainability for diagnostic models."}},"Patient Data LLM":{p:["Langfuse"],r:{"Langfuse":"Self-hosted ensures ePHI never leaves secure perimeter. GDPR/HIPAA compliant."}},"EHR Integration":{p:["Datadog LLM Obs","W&B Weave"],r:{"Datadog LLM Obs":"Unified infra+LLM observability for complex EHR integrations, enterprise APM.","W&B Weave":"ML+LLM hybrid tracking for EHR data pipelines, experiment management."}}},
 manufacturing:{"Predictive Maintenance":{p:["W&B Weave","SigNoz"],r:{"W&B Weave":"ML+LLM unified tracking for time-series predictive models with LLM diagnostics.","SigNoz":"Cost-effective OTel-native APM for edge/IoT, self-hosted for OT/IT."}},"Quality Control AI":{p:["Arize / Phoenix","Evidently AI"],r:{"Arize / Phoenix":"Best-in-class eval and drift detection for CV quality inspection.","Evidently AI":"Rich OSS test suites for data quality, CI/CD friendly for quality gates."}},"Supply Chain LLM":{p:["LangSmith","Maxim AI"],r:{"LangSmith":"Deep tracing for LLM reasoning over supplier contracts and risk docs.","Maxim AI":"End-to-end lifecycle management for supply chain optimization LLMs."}},"OT/IT Security":{p:["SigNoz","Datadog LLM Obs"],r:{"SigNoz":"IEC 62443 via self-hosted OTel-native infra monitoring across OT/IT.","Datadog LLM Obs":"Unified APM for comprehensive infra monitoring with LLM overlay."}}}
 };
@@ -591,9 +591,9 @@ c.dataset.comp = p.comp.join(','); c.dataset.fw = p.fw.join(',');
 c.dataset.seg = p.seg.join(',');
 
 const oc = p.otel==='Yes'?'b-otel-y':p.otel==='Partial'?'b-otel-p':'b-otel-n';
-const ol = p.otel==='Yes'?'✓ OTel':p.otel==='Partial'?'◐ OTel':'✗ OTel';
+const ol = p.otel==='Yes'?'OTel Native':p.otel==='Partial'?'OTel Partial':'No OTel';
 const sc = p.sh.startsWith('Yes')?'b-sh-y':'b-sh-n';
-const sl = p.sh.startsWith('Yes')?'✓ Self-Host':'✗ No Self-Host';
+const sl = p.sh.startsWith('Yes')?'Self-Host':'No Self-Host';
 const tc = p.tier===1?'b-t1':'b-t2';
 const tl = p.tier===1?'Tier 1':'Tier 2';
 
@@ -603,7 +603,7 @@ c.innerHTML = `
 <div class="setup-bar-wrap"><div class="setup-row"><span>Setup Ease</span><span>${p.se}/10</span></div><div class="setup-track"><div class="setup-fill" style="width:${p.se*10}%"></div></div></div>
 <div class="sg s"><div class="sg-t str">Strengths</div><ul>${p.str.map(s=>`<li>${s}</li>`).join('')}</ul></div>
 <div class="sg g"><div class="sg-t gap">Gaps</div><ul>${p.gaps.map(g=>`<li>${g}</li>`).join('')}</ul></div>
-<div class="p-foot"><span class="p-seg">${p.ideal}</span><div class="p-actions"><button class="btn-s btn-radar" onclick="openModal(${p.id})">◎ Radar</button><button class="btn-s btn-cmp ${selected.has(p.id)?'sel':''}" data-pid="${p.id}" onclick="toggleCmp(${p.id},this)">${selected.has(p.id)?'✓ Selected':'+ Compare'}</button></div></div>
+<div class="p-foot"><span class="p-seg">${p.ideal}</span><div class="p-actions"><button class="btn-s btn-radar" onclick="openModal(${p.id})">Radar</button><button class="btn-s btn-cmp ${selected.has(p.id)?'sel':''}" data-pid="${p.id}" onclick="toggleCmp(${p.id},this)">${selected.has(p.id)?'Selected':'+ Compare'}</button></div></div>
 `;
 g.appendChild(c);
 });
@@ -637,9 +637,9 @@ document.querySelectorAll('.f-group select').forEach(s=>s.addEventListener('chan
 // ============================================================
 function toggleCmp(id,btn){
 if(selected.has(id)){selected.delete(id);btn.classList.remove('sel');btn.textContent='+ Compare'}
-else{if(selected.size>=4){alert('Max 4');return}selected.add(id);btn.classList.add('sel');btn.textContent='✓ Selected'}
+else{if(selected.size>=4){alert('Max 4');return}selected.add(id);btn.classList.add('sel');btn.textContent='Selected'}
 const n=selected.size;
-document.getElementById('selCount').textContent=`${n} selected (pick 2–4)`;
+document.getElementById('selCount').textContent=`${n} selected (pick 2-4)`;
 const cb=document.getElementById('compareBtn');
 if(n>=2)cb.classList.add('active');else{cb.classList.remove('active');document.getElementById('cmpSection').classList.remove('show')}
 }
@@ -659,8 +659,8 @@ const dims=[
 const t=document.getElementById('cmpTable');
 let h='<thead><tr><th>Dimension</th>';sel.forEach(p=>h+=`<th>${p.name}</th>`);h+='</tr></thead><tbody>';
 dims.forEach(d=>{h+=`<tr><td class="dl">${d.l}</td>`;sel.forEach(p=>{let v;if(d.k.includes('.')){const[a,b]=d.k.split('.');v=p[a][b]}else v=p[d.k];h+=`<td>${d.f?d.f(v):v}</td>`});h+='</tr>'});
-h+='<tr><td class="dl" style="color:var(--success)">Strengths</td>';sel.forEach(p=>{h+=`<td><ul style="list-style:none;padding:0">${p.str.map(s=>`<li style="font-size:11px;color:var(--text-dim);margin-bottom:3px">• ${s}</li>`).join('')}</ul></td>`});h+='</tr>';
-h+='<tr><td class="dl" style="color:var(--warning)">Gaps</td>';sel.forEach(p=>{h+=`<td><ul style="list-style:none;padding:0">${p.gaps.map(g=>`<li style="font-size:11px;color:var(--text-dim);margin-bottom:3px">• ${g}</li>`).join('')}</ul></td>`});h+='</tr></tbody>';
+h+='<tr><td class="dl" style="color:var(--success)">Strengths</td>';sel.forEach(p=>{h+=`<td><ul style="list-style:none;padding:0">${p.str.map(s=>`<li style="font-size:11px;color:var(--text-dim);margin-bottom:3px">-  ${s}</li>`).join('')}</ul></td>`});h+='</tr>';
+h+='<tr><td class="dl" style="color:var(--warning)">Gaps</td>';sel.forEach(p=>{h+=`<td><ul style="list-style:none;padding:0">${p.gaps.map(g=>`<li style="font-size:11px;color:var(--text-dim);margin-bottom:3px">-  ${g}</li>`).join('')}</ul></td>`});h+='</tr></tbody>';
 t.innerHTML=h;
 
 if(cmpRadarInst)cmpRadarInst.destroy();
@@ -676,7 +676,7 @@ sec.scrollIntoView({behavior:'smooth',block:'start'});
 function openModal(id){
 const p=P.find(x=>x.id===id);if(!p)return;
 document.getElementById('rmTitle').textContent=p.name;
-document.getElementById('rmSub').textContent=`${p.cat} · Tier ${p.tier} · ${p.ideal}`;
+document.getElementById('rmSub').textContent=`${p.cat}  |  Tier ${p.tier}  |  ${p.ideal}`;
 document.getElementById('radarModal').classList.add('show');
 if(radarInst)radarInst.destroy();
 radarInst=new Chart(document.getElementById('radarChart'),{type:'radar',data:{labels:['Tracing','Evaluation','Enterprise','Setup','Cost','Agentic'],datasets:[{label:p.name,data:[p.sc.t,p.sc.e,p.sc.en,p.sc.s,p.sc.c,p.sc.a],borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.12)',borderWidth:2.5,pointBackgroundColor:'#38bdf8',pointBorderColor:'#2563eb',pointRadius:5}]},options:{responsive:true,scales:{r:{beginAtZero:true,max:10,ticks:{stepSize:2,color:'#64748b',backdropColor:'transparent',font:{size:11}},grid:{color:'#1e293b'},angleLines:{color:'#1e293b'},pointLabels:{color:'#e2e8f0',font:{size:12,weight:'600'}}}},plugins:{legend:{display:false}}}});
@@ -717,13 +717,13 @@ maintainAspectRatio:true,
 aspectRatio:1.33,
 scales:{
 x:{
-  title:{display:true,text:'Completeness of Vision →',color:'#e2e8f0',font:{size:12,weight:'700',family:'DM Sans'}},
+  title:{display:true,text:'Completeness of Vision ->',color:'#e2e8f0',font:{size:12,weight:'700',family:'DM Sans'}},
   min:1,max:10,
   grid:{color:'#1e293b'},
   ticks:{color:'#64748b',font:{size:10}}
 },
 y:{
-  title:{display:true,text:'Ability to Execute →',color:'#e2e8f0',font:{size:12,weight:'700',family:'DM Sans'}},
+  title:{display:true,text:'Ability to Execute ->',color:'#e2e8f0',font:{size:12,weight:'700',family:'DM Sans'}},
   min:2,max:10,
   grid:{color:'#1e293b'},
   ticks:{color:'#64748b',font:{size:10}}
@@ -803,7 +803,7 @@ d.p.forEach(pn=>{
 const p=P.find(x=>x.name===pn);
 const reason=d.r[pn]||'';
 const card=document.createElement('div');card.className='uc-card';
-card.innerHTML=`<div class="uc-card-name">${pn}</div>${p?`<div class="p-badges" style="margin-bottom:6px"><span class="badge ${p.tier===1?'b-t1':'b-t2'}">Tier ${p.tier}</span><span class="badge b-cat">${p.cat}</span>${p.comp.map(c=>`<span class="badge b-comp">${c}</span>`).join('')}</div>`:''}<div class="uc-card-reason">${reason}</div>${p?`<div style="margin-top:10px"><button class="btn-s btn-radar" onclick="openModal(${p.id})">◎ Radar</button></div>`:''}`;
+card.innerHTML=`<div class="uc-card-name">${pn}</div>${p?`<div class="p-badges" style="margin-bottom:6px"><span class="badge ${p.tier===1?'b-t1':'b-t2'}">Tier ${p.tier}</span><span class="badge b-cat">${p.cat}</span>${p.comp.map(c=>`<span class="badge b-comp">${c}</span>`).join('')}</div>`:''}<div class="uc-card-reason">${reason}</div>${p?`<div style="margin-top:10px"><button class="btn-s btn-radar" onclick="openModal(${p.id})">Radar</button></div>`:''}`;
 res.appendChild(card);
 });
 }
