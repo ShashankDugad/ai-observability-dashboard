@@ -170,6 +170,55 @@ a{color:var(--accent2);text-decoration:none}
 /* No results */
 .no-results{text-align:center;padding:60px 20px;color:var(--text-dim);font-size:16px;display:none}
 .no-results.show{display:block}
+
+/* Scoring Methodology Section */
+.scoring-intro-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:24px;position:relative;overflow:hidden}
+.scoring-intro-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.scoring-intro-card p{color:var(--text-dim);font-size:14px;line-height:1.7;margin-bottom:8px}
+.scoring-intro-card p:last-child{margin-bottom:0}
+.scoring-intro-card strong{color:var(--text)}
+
+.score-legend{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:24px}
+.score-legend-title{font-size:13px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.score-gradient-bar{height:14px;border-radius:7px;background:linear-gradient(90deg,#EF4444 0%,#EF4444 25%,#F59E0B 25%,#F59E0B 55%,#10B981 55%,#10B981 80%,#059669 80%,#059669 100%);margin-bottom:10px;position:relative}
+.score-legend-labels{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px}
+.score-legend-label{text-align:center;font-size:11px;padding:4px 6px;border-radius:6px}
+.score-legend-label.weak{color:#EF4444;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2)}
+.score-legend-label.moderate{color:#F59E0B;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2)}
+.score-legend-label.strong{color:#10B981;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2)}
+.score-legend-label.best{color:#059669;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2)}
+.score-legend-label .range{font-weight:800;display:block;font-size:13px;margin-bottom:2px}
+.score-legend-label .desc{font-size:10px;line-height:1.3}
+
+.dimension-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:24px}
+@media(max-width:1100px){.dimension-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.dimension-grid{grid-template-columns:1fr}}
+
+.dimension-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:22px;transition:all .35s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.dimension-card:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(0,0,0,.25);border-color:rgba(255,255,255,.1)}
+.dimension-card-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0}
+.dimension-card-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;margin-top:6px}
+.dimension-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.dimension-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:3px}
+.dimension-subtitle{font-size:11px;color:var(--text-dim);line-height:1.4}
+.dimension-criteria{margin-bottom:14px}
+.dimension-criteria-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-dim);margin-bottom:8px}
+.criteria-row{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start}
+.criteria-range{font-size:10px;font-weight:800;padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px}
+.criteria-range.best-class{background:rgba(5,150,105,.15);color:#059669;border:1px solid rgba(5,150,105,.3)}
+.criteria-range.strong{background:rgba(16,185,129,.12);color:#10B981;border:1px solid rgba(16,185,129,.25)}
+.criteria-range.moderate{background:rgba(245,158,11,.1);color:#F59E0B;border:1px solid rgba(245,158,11,.2)}
+.criteria-range.weak{background:rgba(239,68,68,.1);color:#EF4444;border:1px solid rgba(239,68,68,.2)}
+.criteria-text{font-size:11px;color:var(--text-dim);line-height:1.4}
+.dimension-examples{border-top:1px solid var(--border);padding-top:12px}
+.dimension-examples-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-dim);margin-bottom:8px}
+.example-item{font-size:11px;color:var(--text-dim);margin-bottom:5px;padding-left:12px;position:relative;line-height:1.4}
+.example-item::before{content:'▸';position:absolute;left:0;color:var(--accent2);font-size:9px;top:2px}
+.example-item strong{color:var(--text)}
+
+.scoring-disclaimer{background:rgba(0,102,204,.05);border:1px solid rgba(0,102,204,.15);border-radius:12px;padding:18px 22px;margin-top:4px}
+.scoring-disclaimer p{font-size:12px;color:var(--text-dim);line-height:1.6;margin:0}
+.scoring-disclaimer strong{color:var(--accent2)}
 </style>
 </head>
 <body>
@@ -297,6 +346,191 @@ a{color:var(--accent2);text-decoration:none}
 <div class="section-header">Platform Intelligence Cards</div>
 <div class="platform-grid" id="platformGrid"></div>
 <div class="no-results" id="noResults">No platforms match the current filters. Try adjusting your criteria.</div>
+
+<!-- Scoring Methodology Section -->
+<div id="scoringMethodology">
+  <div class="section-header">Scoring Methodology</div>
+
+  <!-- Intro Card -->
+  <div class="scoring-intro-card">
+    <p>All platforms are scored on a <strong>1–10 scale across 6 dimensions</strong>. Each dimension score reflects a synthesis of: <strong>official documentation</strong>, <strong>community benchmarks</strong>, <strong>hands-on engineering reports</strong>, and <strong>TCS practitioner assessments (2025–2026)</strong>.</p>
+    <p>Scores are <strong>relative within the AI observability landscape</strong> — a score of 10 does not mean "perfect"; it means <strong>best-in-class for this dimension among observed platforms</strong>. Platforms are evaluated against enterprise production deployment standards.</p>
+  </div>
+
+  <!-- Score Scale Legend -->
+  <div class="score-legend">
+    <div class="score-legend-title">Score Scale Reference</div>
+    <div class="score-gradient-bar"></div>
+    <div class="score-legend-labels">
+      <div class="score-legend-label weak"><span class="range">1–3</span><span class="desc">Weak / Not a core feature</span></div>
+      <div class="score-legend-label moderate"><span class="range">4–6</span><span class="desc">Moderate / Functional but limited</span></div>
+      <div class="score-legend-label strong"><span class="range">7–8</span><span class="desc">Strong / Production-ready</span></div>
+      <div class="score-legend-label best"><span class="range">9–10</span><span class="desc">Best-in-class / Industry-leading</span></div>
+    </div>
+  </div>
+
+  <!-- Six Dimension Cards -->
+  <div class="dimension-grid">
+
+    <!-- Dimension 1: Tracing Depth -->
+    <div class="dimension-card">
+      <div class="dimension-card-accent" style="background:#0066CC"></div>
+      <div class="dimension-card-header">
+        <div class="dimension-icon" style="background:rgba(0,102,204,.15);color:#0066CC">⛓</div>
+        <div>
+          <div class="dimension-title">Tracing Depth</div>
+          <div class="dimension-subtitle">Granularity and completeness of execution traces across LLM calls, agent steps, tool invocations, and multi-step pipelines</div>
+        </div>
+      </div>
+      <div class="dimension-criteria">
+        <div class="dimension-criteria-title">Scoring Criteria</div>
+        <div class="criteria-row"><span class="criteria-range best-class">9–10</span><span class="criteria-text">Full multi-agent reasoning traces, async context propagation, OTel-native, sub-step visibility, token-level logging</span></div>
+        <div class="criteria-row"><span class="criteria-range strong">7–8</span><span class="criteria-text">Multi-step LLM tracing with good span coverage, partial OTel, framework-native instrumentation</span></div>
+        <div class="criteria-row"><span class="criteria-range moderate">4–6</span><span class="criteria-text">Single-call or shallow traces, limited span nesting, proxy-level only</span></div>
+        <div class="criteria-row"><span class="criteria-range weak">1–3</span><span class="criteria-text">No meaningful tracing, log-only or absent</span></div>
+      </div>
+      <div class="dimension-examples">
+        <div class="dimension-examples-title">Example Callouts</div>
+        <div class="example-item"><strong>LangSmith (9):</strong> Full LangChain agent step tracing with nested spans and async propagation</div>
+        <div class="example-item"><strong>Evidently AI (3):</strong> Batch evaluation only — no real-time trace capture</div>
+      </div>
+    </div>
+
+    <!-- Dimension 2: Evaluation Quality -->
+    <div class="dimension-card">
+      <div class="dimension-card-accent" style="background:#7C3AED"></div>
+      <div class="dimension-card-header">
+        <div class="dimension-icon" style="background:rgba(124,58,237,.15);color:#7C3AED">✦</div>
+        <div>
+          <div class="dimension-title">Evaluation Quality</div>
+          <div class="dimension-subtitle">Depth, reliability, and breadth of LLM output evaluation — hallucination detection, RAG faithfulness, relevance scoring, safety checks, and regression testing</div>
+        </div>
+      </div>
+      <div class="dimension-criteria">
+        <div class="dimension-criteria-title">Scoring Criteria</div>
+        <div class="criteria-row"><span class="criteria-range best-class">9–10</span><span class="criteria-text">Multi-metric eval suites (faithfulness, relevance, toxicity, groundedness), CI/CD integration, human feedback loops, custom eval support</span></div>
+        <div class="criteria-row"><span class="criteria-range strong">7–8</span><span class="criteria-text">Strong eval coverage with 5+ metrics, dataset versioning, reproducible runs</span></div>
+        <div class="criteria-row"><span class="criteria-range moderate">4–6</span><span class="criteria-text">Basic output scoring, limited metric variety, no regression tracking</span></div>
+        <div class="criteria-row"><span class="criteria-range weak">1–3</span><span class="criteria-text">No evaluation engine — monitoring or tracing only</span></div>
+      </div>
+      <div class="dimension-examples">
+        <div class="dimension-examples-title">Example Callouts</div>
+        <div class="example-item"><strong>Arize / Phoenix (10):</strong> 40+ built-in eval templates, RAG triad evaluation, hallucination scoring, OTel-native eval spans</div>
+        <div class="example-item"><strong>Braintrust (10):</strong> Software-engineering-grade eval workflows with CI/CD hooks and dataset versioning</div>
+        <div class="example-item"><strong>OpenLLMetry (1):</strong> Pure instrumentation layer — no evaluation engine included</div>
+      </div>
+    </div>
+
+    <!-- Dimension 3: Enterprise Readiness -->
+    <div class="dimension-card">
+      <div class="dimension-card-accent" style="background:#059669"></div>
+      <div class="dimension-card-header">
+        <div class="dimension-icon" style="background:rgba(5,150,105,.15);color:#059669">🏛</div>
+        <div>
+          <div class="dimension-title">Enterprise Readiness</div>
+          <div class="dimension-subtitle">Suitability for large-scale enterprise deployment — compliance certifications, multi-tenancy, RBAC, SLA guarantees, audit trails, and regulated industry support</div>
+        </div>
+      </div>
+      <div class="dimension-criteria">
+        <div class="dimension-criteria-title">Scoring Criteria</div>
+        <div class="criteria-row"><span class="criteria-range best-class">9–10</span><span class="criteria-text">SOC2 + HIPAA + PCI-DSS certified, RBAC, immutable audit logs, SR 11-7 / EU AI Act alignment, enterprise SLAs</span></div>
+        <div class="criteria-row"><span class="criteria-range strong">7–8</span><span class="criteria-text">SOC2 certified, multi-tenant, good RBAC, production-grade reliability</span></div>
+        <div class="criteria-row"><span class="criteria-range moderate">4–6</span><span class="criteria-text">Basic security, limited compliance certifications, suitable for non-regulated use</span></div>
+        <div class="criteria-row"><span class="criteria-range weak">1–3</span><span class="criteria-text">OSS only, no compliance certifications, not production-enterprise-ready</span></div>
+      </div>
+      <div class="dimension-examples">
+        <div class="dimension-examples-title">Example Callouts</div>
+        <div class="example-item"><strong>Fiddler AI (10):</strong> SR 11-7 aligned, HIPAA, SOC2, explainability-first for regulated BFSI/Healthcare</div>
+        <div class="example-item"><strong>Datadog LLM Observability (10):</strong> SOC2, HIPAA, PCI-DSS, enterprise SLAs, unlimited scalability</div>
+        <div class="example-item"><strong>Evidently AI (5):</strong> Open-source only — no compliance certifications, no SaaS tier</div>
+      </div>
+    </div>
+
+    <!-- Dimension 4: Setup Ease -->
+    <div class="dimension-card">
+      <div class="dimension-card-accent" style="background:#D97706"></div>
+      <div class="dimension-card-header">
+        <div class="dimension-icon" style="background:rgba(217,119,6,.15);color:#D97706">⚡</div>
+        <div>
+          <div class="dimension-title">Setup Ease</div>
+          <div class="dimension-subtitle">How quickly a developer can go from zero to first meaningful trace or evaluation — SDK complexity, documentation quality, time-to-first-value, and integration friction</div>
+        </div>
+      </div>
+      <div class="dimension-criteria">
+        <div class="dimension-criteria-title">Scoring Criteria</div>
+        <div class="criteria-row"><span class="criteria-range best-class">9–10</span><span class="criteria-text">Under 5 minutes to first trace, single-line or proxy-based setup, zero config required</span></div>
+        <div class="criteria-row"><span class="criteria-range strong">7–8</span><span class="criteria-text">Under 30 minutes, clear SDK, good docs, minimal boilerplate</span></div>
+        <div class="criteria-row"><span class="criteria-range moderate">4–6</span><span class="criteria-text">1–4 hours, requires configuration, some framework-specific friction</span></div>
+        <div class="criteria-row"><span class="criteria-range weak">1–3</span><span class="criteria-text">Days of setup, complex infrastructure requirements, steep learning curve</span></div>
+      </div>
+      <div class="dimension-examples">
+        <div class="dimension-examples-title">Example Callouts</div>
+        <div class="example-item"><strong>Helicone (10):</strong> One URL change to proxy — first trace in under 60 seconds, zero code changes</div>
+        <div class="example-item"><strong>Langfuse (9):</strong> Docker self-host in under 10 minutes, SDK wraps existing OpenAI calls with 2 lines</div>
+        <div class="example-item"><strong>Fiddler AI (4):</strong> Requires dedicated infrastructure setup, data pipeline configuration, and ML team involvement</div>
+      </div>
+    </div>
+
+    <!-- Dimension 5: Cost Transparency -->
+    <div class="dimension-card">
+      <div class="dimension-card-accent" style="background:#0891B2"></div>
+      <div class="dimension-card-header">
+        <div class="dimension-icon" style="background:rgba(8,145,178,.15);color:#0891B2">💲</div>
+        <div>
+          <div class="dimension-title">Cost Transparency</div>
+          <div class="dimension-subtitle">How clearly the platform exposes token usage, API costs, per-request pricing, and total LLM spend — both in the platform UI and via APIs/exports</div>
+        </div>
+      </div>
+      <div class="dimension-criteria">
+        <div class="dimension-criteria-title">Scoring Criteria</div>
+        <div class="criteria-row"><span class="criteria-range best-class">9–10</span><span class="criteria-text">Real-time per-request cost breakdown, token-level attribution, cost alerts, budget controls, exportable cost reports</span></div>
+        <div class="criteria-row"><span class="criteria-range strong">7–8</span><span class="criteria-text">Good cost dashboards, token tracking, basic alerting</span></div>
+        <div class="criteria-row"><span class="criteria-range moderate">4–6</span><span class="criteria-text">Aggregate cost views only, limited granularity, no alerting</span></div>
+        <div class="criteria-row"><span class="criteria-range weak">1–3</span><span class="criteria-text">No cost tracking, or platform itself has opaque/unpredictable pricing</span></div>
+      </div>
+      <div class="dimension-examples">
+        <div class="dimension-examples-title">Example Callouts</div>
+        <div class="example-item"><strong>Helicone (9):</strong> Per-request cost tracking with caching savings visibility and budget alerts</div>
+        <div class="example-item"><strong>Langfuse (9):</strong> Full token cost attribution per trace, exportable, self-hosted = zero platform cost</div>
+        <div class="example-item"><strong>Fiddler AI (4):</strong> Platform pricing is opaque and enterprise-negotiated; no built-in LLM cost tracking</div>
+        <div class="example-item"><strong>Arize / Phoenix (5):</strong> Strong on ML monitoring but LLM cost attribution is less granular than pure-play tools</div>
+      </div>
+    </div>
+
+    <!-- Dimension 6: Agentic Support -->
+    <div class="dimension-card">
+      <div class="dimension-card-accent" style="background:#DC2626"></div>
+      <div class="dimension-card-header">
+        <div class="dimension-icon" style="background:rgba(220,38,38,.15);color:#DC2626">🤖</div>
+        <div>
+          <div class="dimension-title">Agentic Support</div>
+          <div class="dimension-subtitle">Platform's ability to observe, trace, and evaluate multi-agent systems — agent-to-agent communication, tool call chains, memory access, planning loops, and autonomous decision trees</div>
+        </div>
+      </div>
+      <div class="dimension-criteria">
+        <div class="dimension-criteria-title">Scoring Criteria</div>
+        <div class="criteria-row"><span class="criteria-range best-class">9–10</span><span class="criteria-text">Full multi-agent graph tracing, tool invocation visibility, memory read/write logging, agent reasoning step capture, support for CrewAI / AutoGen / LangGraph</span></div>
+        <div class="criteria-row"><span class="criteria-range strong">7–8</span><span class="criteria-text">Multi-step agent tracing with good span coverage, partial tool call visibility</span></div>
+        <div class="criteria-row"><span class="criteria-range moderate">4–6</span><span class="criteria-text">Single-agent tracing only, limited tool call capture, no inter-agent visibility</span></div>
+        <div class="criteria-row"><span class="criteria-range weak">1–3</span><span class="criteria-text">No agentic support — single LLM call monitoring only</span></div>
+      </div>
+      <div class="dimension-examples">
+        <div class="dimension-examples-title">Example Callouts</div>
+        <div class="example-item"><strong>LangSmith (8):</strong> Native LangGraph support with full agent step tracing, tool call capture, and human-in-the-loop visibility</div>
+        <div class="example-item"><strong>Arize / Phoenix (8):</strong> OTel-native agent spans with tool invocation tracing and multi-agent session grouping</div>
+        <div class="example-item"><strong>Helicone (4):</strong> Proxy-based — captures individual LLM calls but cannot reconstruct agent reasoning chains</div>
+        <div class="example-item"><strong>Evidently AI (3):</strong> Batch evaluation framework — no real-time agentic trace support</div>
+      </div>
+    </div>
+
+  </div><!-- end dimension-grid -->
+
+  <!-- Scoring Transparency Note -->
+  <div class="scoring-disclaimer">
+    <p><strong>Scoring Transparency:</strong> Scores represent TCS AI &amp; Data Practice assessments based on platform documentation, community benchmarks, and practitioner evaluations as of Q1–Q2 2026. Scores may evolve as platforms release new features. All platforms are evaluated against enterprise production deployment standards.</p>
+  </div>
+</div>
+<!-- End Scoring Methodology Section -->
 
 <!-- Comparison Section -->
 <div class="comparison-section" id="comparisonSection">
@@ -1043,12 +1277,10 @@ try {
 const response = await fetch('https://spine-prod-data.s3.amazonaws.com/canvas/bdd1500c-3da9-434e-a531-943448f34619/sql_results/9cbff387-715f-42aa-acbe-f6b74412bc71/v1/DATASETS_TIER2_DETAILS.csv?AWSAccessKeyId=AKIA5FTZCT34I77J7COV&Signature=mj6j50WnXOBB3OdstiCPcx0%2FUCQ%3D&Expires=1807229226');
 const text = await response.text();
 const parsed = Papa.parse(text, { header: true }).data;
-// Enrich Tier 2 platforms with any additional dataset info
 parsed.forEach(row => {
 if (!row.Platform) return;
 const match = platforms.find(p => p.name.toLowerCase().includes(row.Platform.toLowerCase()) || row.Platform.toLowerCase().includes(p.name.toLowerCase().split('/')[0].trim()));
 if (match && match.tier === 2) {
-// Use dataset info to supplement if available
 if (row.pricing && row.pricing.trim()) {
 match.pricing = row.pricing.trim();
 }
